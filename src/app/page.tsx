@@ -17,7 +17,8 @@ import {
   LineChart,
   BarChart3,
   TrendingUp,
-  Target
+  Target,
+  Github
 } from "lucide-react";
 import { ParticleBackground } from "@/components/ParticleBackground";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -123,6 +124,9 @@ export default function Home() {
                   Explore Work <ChevronRight className="group-hover:translate-x-1 transition-transform" />
                 </a>
                 <div className="flex gap-4">
+                  <a href="https://github.com/ABHIRAMI-R" target="_blank" className="p-5 rounded-2xl border border-white/10 hover:border-cyan-500/50 transition-all text-slate-400 hover:text-white bg-white/5 backdrop-blur-sm group">
+                    <Github size={24} className="group-hover:scale-110 transition-transform" />
+                  </a>
                   <a href="https://www.linkedin.com/in/abhirami-r-4b641828b" target="_blank" className="p-5 rounded-2xl border border-white/10 hover:border-cyan-500/50 transition-all text-slate-400 hover:text-white bg-white/5 backdrop-blur-sm group">
                     <Linkedin size={24} className="group-hover:scale-110 transition-transform" />
                   </a>
@@ -336,13 +340,15 @@ export default function Home() {
                   title: "Fraud Detection Engine",
                   desc: "High-performance predictive system detecting fraudulent transactions with advanced precision/recall optimization for financial safety.",
                   tags: ["ML", "Data Analysis", "Python"],
-                  gradient: "from-rose-500/40 to-orange-500/40"
+                  gradient: "from-rose-500/40 to-orange-500/40",
+                  link: "https://github.com/ABHIRAMI-R/fraud_prediction"
                 },
                 {
                   title: "Diabetes Prediction",
                   desc: "Predictive health analytics model identifying diabetes risk factors using clinical data parameters and statistical modeling.",
                   tags: ["Scikit-learn", "NumPy", "EDA"],
-                  gradient: "from-blue-500/40 to-indigo-500/40"
+                  gradient: "from-blue-500/40 to-indigo-500/40",
+                  link: "https://github.com/ABHIRAMI-R/Diabetes_prediction"
                 },
                 {
                   title: "Campus Hub",
