@@ -68,7 +68,7 @@ export default function Home() {
           >
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-fuchsia-500 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20">A</div>
             <span className="text-xl font-bold font-syne tracking-tight text-white">
-              ABHIRAMI<span className="text-cyan-500">.</span>R
+              ABHIRAMI <span className="text-cyan-500">R</span>
             </span>
           </motion.div>
           <div className="hidden md:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-400">
@@ -110,10 +110,10 @@ export default function Home() {
               </motion.div>
               <motion.h1 
                 variants={fadeIn}
-                className="text-7xl md:text-9xl font-black font-syne leading-[0.85] text-white mb-10 tracking-tighter"
+                className="text-7xl md:text-9xl font-black font-syne leading-none text-white mb-10 tracking-tighter"
               >
                 Data <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-fuchsia-500">Architect<span className="text-white">.</span></span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-fuchsia-500">Science<span className="text-white">.</span></span>
               </motion.h1>
               <motion.p variants={fadeIn} className="text-xl text-slate-400 max-w-lg mb-12 leading-relaxed font-medium">
                 Pioneering machine learning solutions to decode complex data patterns and drive intelligent decisions.
@@ -217,7 +217,7 @@ export default function Home() {
                   viewport={{ once: true }}
                 >
                   <h2 className="text-5xl font-black font-syne text-white mb-10 inline-flex flex-col">
-                    <span className="text-cyan-500 text-xs tracking-[0.4em] uppercase mb-4">Perspective</span>
+                    <span className="text-cyan-500 text-xs tracking-[0.4em] uppercase mb-4">Background</span>
                     Core Mission
                   </h2>
                   <div className="space-y-8 text-slate-400 leading-relaxed text-xl font-medium">
@@ -248,7 +248,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-cyan-500/5 blur-[100px] rounded-full" />
                 {[
                   { label: "Role", value: "Trainee Engineer", icon: Briefcase, color: "text-cyan-400", bg: "bg-cyan-400/5" },
-                  { label: "Academia", value: "B.Tech CSE", icon: GraduationCap, color: "text-fuchsia-400", bg: "bg-fuchsia-400/5" },
+                  { label: "Academia", value: "B.Tech CSE", icon: GraduationCap, color: "text-fuchsia-400", bg: "bg-fuchsia-400/5", sub: "Younus College" },
                   { label: "Systems", value: "Predictive ML", icon: Target, color: "text-amber-400", bg: "bg-amber-400/5" },
                   { label: "Flow", value: "Automated EDA", icon: BrainCircuit, color: "text-emerald-400", bg: "bg-emerald-400/5" },
                 ].map((stat, i) => (
@@ -261,6 +261,7 @@ export default function Home() {
                     <stat.icon className={`${stat.color} mb-6`} size={32} />
                     <div className="text-[10px] text-slate-500 uppercase font-black tracking-[0.2em] mb-2">{stat.label}</div>
                     <div className="text-white font-black text-lg leading-tight">{stat.value}</div>
+                    {stat.sub && <div className="text-[9px] text-slate-600 font-bold uppercase tracking-widest mt-1">{stat.sub}</div>}
                   </motion.div>
                 ))}
               </div>
@@ -373,7 +374,7 @@ export default function Home() {
                   align: "left",
                   details: [
                     "Cleaning and transforming unstructured data using Pandas.",
-                    "Executing Exploratory Data Analysis (EDA) and visualization.",
+                    "Executing Exploratory Data Analysis (EDA) and visualizations.",
                     "Implementing supervised learning algorithms on real-world datasets.",
                     "Optimizing business decision-making through data-driven insights."
                   ]
@@ -405,10 +406,9 @@ export default function Home() {
                     <div className="text-slate-400 font-bold text-sm mb-8 tracking-widest">{exp.company}</div>
                     <ul className={`space-y-4 ${exp.align === 'left' ? 'md:items-end' : 'md:items-start'} flex flex-col`}>
                       {exp.details.map((detail, j) => (
-                        <li key={j} className="text-slate-500 text-sm font-medium leading-relaxed flex gap-3 max-w-sm">
-                          {exp.align === 'right' && <div className="w-1 h-1 rounded-full bg-cyan-500 mt-2 shrink-0" />}
-                          {detail}
-                          {exp.align === 'left' && <div className="w-1 h-1 rounded-full bg-cyan-500 mt-2 shrink-0 hidden md:block" />}
+                        <li key={j} className={`text-slate-500 text-sm font-medium leading-relaxed flex gap-3 max-w-sm ${exp.align === 'left' ? 'md:flex-row-reverse md:text-right' : 'flex-row text-left'}`}>
+                          <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2 shrink-0" />
+                          <span>{detail}</span>
                         </li>
                       ))}
                     </ul>

@@ -5,11 +5,12 @@ import { useState, useEffect } from "react";
 import { Terminal, Play, Circle } from "lucide-react";
 
 const codeSnippets = [
-  "import pandas as pd\nimport numpy as np",
+  "from sklearn.ensemble import RandomForestClassifier",
+  "import pandas as pd",
   "df = pd.read_csv('market_data.csv')",
-  "model = ScikitLearn.RandomForest()",
-  "accuracy = model.evaluate(test_data)",
-  "print(f'Accuracy: {accuracy:.2%}')",
+  "model = RandomForestClassifier()",
+  "model.fit(X_train, y_train)",
+  "print(f'Accuracy: {model.score(X_test, y_test):.2%}')",
 ];
 
 export function InsightTerminal() {
