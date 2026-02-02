@@ -95,7 +95,7 @@ export default function Home() {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative px-6 py-24 md:py-40 overflow-hidden">
+        <section className="relative px-6 py-12 md:py-40 overflow-hidden">
           <motion.div
             style={{ y: heroY, opacity: heroOpacity }}
             className="max-w-7xl mx-auto flex flex-col gap-16 items-center"
@@ -111,7 +111,7 @@ export default function Home() {
               </motion.div>
               <motion.h1
                 variants={fadeIn}
-                className="text-7xl md:text-9xl font-black font-syne leading-none text-white mb-10 tracking-tighter"
+                className="text-5xl md:text-9xl font-black font-syne leading-none text-white mb-10 tracking-tighter"
               >
                 Data <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-fuchsia-500">Science<span className="text-white">.</span></span>
@@ -349,6 +349,13 @@ export default function Home() {
                   tags: ["Scikit-learn", "NumPy", "EDA"],
                   gradient: "from-blue-500/40 to-indigo-500/40",
                   link: "https://github.com/ABHIRAMI-R/Diabetes_prediction"
+                },
+                {
+                  title: "Breast Cancer Detection",
+                  desc: "Machine learning model to classify breast cancer tumors as malignant or benign using cell feature analysis.",
+                  tags: ["Python", "ML", "Classification"],
+                  gradient: "from-pink-500/40 to-rose-500/40",
+                  link: "https://github.com/ABHIRAMI-R/Python_breastCancer"
                 },
                 {
                   title: "Campus Hub",
