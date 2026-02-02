@@ -2,13 +2,13 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { 
-  Database, 
-  Code2, 
-  BrainCircuit, 
-  Linkedin, 
-  Mail, 
-  ChevronRight, 
+import {
+  Database,
+  Code2,
+  BrainCircuit,
+  Linkedin,
+  Mail,
+  ChevronRight,
   ExternalLink,
   GraduationCap,
   Briefcase,
@@ -61,7 +61,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-[#020617]/40 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-3"
@@ -73,17 +73,17 @@ export default function Home() {
           </motion.div>
           <div className="hidden md:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-400">
             {['About', 'Skills', 'Projects', 'Experience'].map((item) => (
-              <a 
-                key={item} 
-                href={`#${item.toLowerCase()}`} 
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
                 className="hover:text-white transition-colors relative group"
               >
                 {item}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-cyan-500 transition-all group-hover:w-full" />
               </a>
             ))}
-            <a 
-              href="mailto:rsabhirami189@gmail.com" 
+            <a
+              href="mailto:rsabhirami189@gmail.com"
               className="px-6 py-2.5 bg-white text-black rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300 font-bold"
             >
               HIRE ME
@@ -95,20 +95,20 @@ export default function Home() {
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative px-6 py-24 md:py-40 overflow-hidden">
-          <motion.div 
+          <motion.div
             style={{ y: heroY, opacity: heroOpacity }}
-            className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center"
+            className="max-w-7xl mx-auto flex flex-col gap-16 items-center"
           >
-            <motion.div 
+            <motion.div
               initial="initial"
               animate="animate"
               variants={stagger}
-              className="relative z-10"
+              className="relative z-10 w-full"
             >
               <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-500/20 bg-cyan-500/5 text-cyan-400 text-[10px] font-black tracking-[0.2em] uppercase mb-8 shadow-inner shadow-cyan-500/10">
                 <Cpu size={14} className="animate-pulse" /> Data Science Engineering
               </motion.div>
-              <motion.h1 
+              <motion.h1
                 variants={fadeIn}
                 className="text-7xl md:text-9xl font-black font-syne leading-none text-white mb-10 tracking-tighter"
               >
@@ -133,11 +133,11 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="relative"
+              className="relative w-full max-w-4xl"
             >
               <div className="absolute -inset-10 bg-gradient-to-tr from-cyan-500/10 to-fuchsia-500/10 rounded-full blur-[100px] animate-pulse" />
               <div className="relative z-10 p-8 rounded-[3rem] border border-white/10 bg-slate-900/40 backdrop-blur-2xl overflow-hidden shadow-2xl">
@@ -147,17 +147,17 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-emerald-500/80 shadow-lg shadow-emerald-500/20" />
                   <span className="ml-2 text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">Live Data Analysis</span>
                 </div>
-                
-                <div className="grid grid-cols-6 gap-3 h-64 items-end">
+
+                <div className="grid grid-cols-12 gap-3 h-64 items-end">
                   {[35, 65, 45, 85, 25, 95, 55, 75, 40, 60, 30, 90].map((h, i) => (
-                    <motion.div 
+                    <motion.div
                       key={i}
                       initial={{ height: 0 }}
                       animate={{ height: `${h}%` }}
-                      transition={{ 
-                        delay: 0.2 + (i * 0.05), 
-                        duration: 1.5, 
-                        repeat: Infinity, 
+                      transition={{
+                        delay: 0.2 + (i * 0.05),
+                        duration: 1.5,
+                        repeat: Infinity,
                         repeatType: "reverse",
                         ease: "easeInOut"
                       }}
@@ -165,7 +165,7 @@ export default function Home() {
                     />
                   ))}
                 </div>
-                
+
                 <div className="mt-8 flex justify-between items-center text-slate-500 font-mono text-[10px] tracking-tighter">
                   <span>00:00:01:04</span>
                   <div className="flex items-center gap-2">
@@ -176,12 +176,12 @@ export default function Home() {
               </div>
 
               {/* Decorative Elements */}
-              <motion.div 
+              <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute -top-10 -right-10 w-40 h-40 border border-white/5 rounded-full border-dashed"
               />
-              <motion.div 
+              <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
                 className="absolute -bottom-10 -left-10 w-56 h-56 border border-white/5 rounded-full border-dashed"
@@ -222,18 +222,19 @@ export default function Home() {
                   </h2>
                   <div className="space-y-8 text-slate-400 leading-relaxed text-xl font-medium">
                     <p>
-                      I am a motivated Data Science Engineer with a passion for problem-solving and technical innovation. 
-                      Currently based at <span className="text-white underline decoration-cyan-500/30 underline-offset-8">Arcite Project Management Consultancy</span>, 
+                      I am a motivated Data Science Engineer with a passion for problem-solving and technical innovation.
+                      Currently based at <span className="text-white underline decoration-cyan-500/30 underline-offset-8">Arcite Project Management Consultancy</span>,
                       I specialize in converting unstructured data into actionable insights.
                     </p>
                     <p>
-                      My background in Computer Science provided a solid foundation in engineering principles, 
-                      which I now apply to machine learning and statistical modeling.
+                      My background in Computer Science provided a solid foundation in engineering principles.
+                      I hold certifications in <span className="text-cyan-400">Python for Data Science</span> (Coursera) and
+                      <span className="text-cyan-400">Java Programming</span> (ICT Academy).
                     </p>
                     <div className="pt-6 flex gap-10">
                       <div>
-                        <div className="text-3xl font-black text-white mb-1">2025</div>
-                        <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Graduation</div>
+                        <div className="text-3xl font-black text-white mb-1">2021-2025</div>
+                        <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">B.Tech CSE</div>
                       </div>
                       <div className="w-px h-12 bg-white/10" />
                       <div>
@@ -247,13 +248,13 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-6 relative">
                 <div className="absolute inset-0 bg-cyan-500/5 blur-[100px] rounded-full" />
                 {[
-                  { label: "Role", value: "Trainee Engineer", icon: Briefcase, color: "text-cyan-400", bg: "bg-cyan-400/5" },
-                  { label: "Academia", value: "B.Tech CSE", icon: GraduationCap, color: "text-fuchsia-400", bg: "bg-fuchsia-400/5", sub: "Younus College" },
+                  { label: "Role", value: "Data Science Trainee", icon: Briefcase, color: "text-cyan-400", bg: "bg-cyan-400/5" },
+                  { label: "Academia", value: "B.Tech CSE", icon: GraduationCap, color: "text-fuchsia-400", bg: "bg-fuchsia-400/5", sub: "APJ Abdul Kalam Tech Univ" },
                   { label: "Systems", value: "Predictive ML", icon: Target, color: "text-amber-400", bg: "bg-amber-400/5" },
                   { label: "Flow", value: "Automated EDA", icon: BrainCircuit, color: "text-emerald-400", bg: "bg-emerald-400/5" },
                 ].map((stat, i) => (
-                  <motion.div 
-                    key={i} 
+                  <motion.div
+                    key={i}
                     whileHover={{ y: -5, scale: 1.02 }}
                     className={`p-8 rounded-[2.5rem] ${stat.bg} border border-white/5 backdrop-blur-sm transition-all relative overflow-hidden group`}
                   >
@@ -278,12 +279,12 @@ export default function Home() {
             </div>
             <div className="grid md:grid-cols-4 gap-10">
               {[
-                { title: "Languages", skills: ["Python", "Java", "SQL", "HTML"], icon: Code2, gradient: "from-blue-500 to-cyan-500" },
+                { title: "Languages", skills: ["Python", "SQL", "Java", "HTML"], icon: Code2, gradient: "from-blue-500 to-cyan-500" },
                 { title: "Analytics", skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn"], icon: BarChart3, gradient: "from-fuchsia-500 to-purple-500" },
                 { title: "Intelligence", skills: ["Scikit-learn", "Supervised Learning", "EDA", "Statistical Models"], icon: LineChart, gradient: "from-cyan-500 to-teal-500" },
-                { title: "Foundation", skills: ["Problem Solving", "Analytical Thinking", "Team Systems"], icon: Award, gradient: "from-amber-500 to-orange-500" },
+                { title: "Core & OS", skills: ["Problem Solving", "Team Work", "Linux", "Windows/Mac"], icon: Award, gradient: "from-amber-500 to-orange-500" },
               ].map((category, i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -325,26 +326,26 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-12">
               {[
-                { 
-                  title: "Crop Recommendation System", 
+                {
+                  title: "Crop Recommendation System",
                   desc: "ML model recommending crops based on soil nutrients and environmental factors (NPK, pH, Rainfall). Optimized for precision in diverse climates.",
                   tags: ["Python", "Scikit-learn", "Pandas"],
                   gradient: "from-emerald-500/40 to-cyan-500/40"
                 },
-                { 
-                  title: "Fraud Detection Engine", 
+                {
+                  title: "Fraud Detection Engine",
                   desc: "High-performance predictive system detecting fraudulent transactions with advanced precision/recall optimization for financial safety.",
                   tags: ["ML", "Data Analysis", "Python"],
                   gradient: "from-rose-500/40 to-orange-500/40"
                 },
-                { 
-                  title: "Diabetes Prediction", 
+                {
+                  title: "Diabetes Prediction",
                   desc: "Predictive health analytics model identifying diabetes risk factors using clinical data parameters and statistical modeling.",
                   tags: ["Scikit-learn", "NumPy", "EDA"],
                   gradient: "from-blue-500/40 to-indigo-500/40"
                 },
-                { 
-                  title: "Campus Hub", 
+                {
+                  title: "Campus Hub",
                   desc: "Integrated digital platform for campus activities and resource management optimization. Built with scalable architecture.",
                   tags: ["Web Dev", "MySQL", "Java"],
                   gradient: "from-amber-500/40 to-yellow-500/40"
@@ -365,7 +366,7 @@ export default function Home() {
             </div>
             <div className="space-y-16 relative">
               <div className="absolute left-[-2px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent md:-translate-x-1/2" />
-              
+
               {[
                 {
                   role: "Data Science Engineer Trainee",
@@ -391,15 +392,15 @@ export default function Home() {
                   ]
                 }
               ].map((exp, i) => (
-                <motion.div 
-                  key={i} 
+                <motion.div
+                  key={i}
                   initial={{ opacity: 0, x: exp.align === 'left' ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   className={`relative flex flex-col ${exp.align === 'left' ? 'md:items-end' : 'md:items-start'} group`}
                 >
                   <div className="absolute left-[-6px] md:left-1/2 top-2 w-3 h-3 rounded-full bg-cyan-500 md:-translate-x-1/2 shadow-[0_0_20px_rgba(6,182,212,0.6)] z-10 group-hover:scale-150 transition-transform" />
-                  
+
                   <div className={`w-full md:w-[45%] p-10 rounded-[2.5rem] bg-slate-900/60 border border-white/5 backdrop-blur-md group-hover:border-cyan-500/20 transition-all shadow-2xl ${exp.align === 'left' ? 'md:text-right' : 'md:text-left'}`}>
                     <div className="mb-4 text-cyan-500 font-black text-[10px] tracking-[0.3em] uppercase">{exp.period}</div>
                     <h3 className="text-3xl font-black text-white mb-2 leading-tight">{exp.role}</h3>
@@ -439,12 +440,12 @@ export default function Home() {
                   Send a Signal
                 </a>
                 <div className="flex gap-6">
-                   <a href="https://www.linkedin.com/in/abhirami-r-4b641828b" target="_blank" className="p-6 rounded-3xl border border-white/10 hover:border-white/40 text-white transition-all backdrop-blur-sm bg-white/5">
+                  <a href="https://www.linkedin.com/in/abhirami-r-4b641828b" target="_blank" className="p-6 rounded-3xl border border-white/10 hover:border-white/40 text-white transition-all backdrop-blur-sm bg-white/5">
                     <Linkedin size={28} />
-                   </a>
-                   <a href="mailto:rsabhirami189@gmail.com" className="p-6 rounded-3xl border border-white/10 hover:border-white/40 text-white transition-all backdrop-blur-sm bg-white/5">
+                  </a>
+                  <a href="mailto:rsabhirami189@gmail.com" className="p-6 rounded-3xl border border-white/10 hover:border-white/40 text-white transition-all backdrop-blur-sm bg-white/5">
                     <Mail size={28} />
-                   </a>
+                  </a>
                 </div>
               </div>
             </motion.div>
