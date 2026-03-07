@@ -17,6 +17,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Abhirami R",
   description: "Data Science Engineer Trainee at Arcite Project Management Consultancy",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
