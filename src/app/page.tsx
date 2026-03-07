@@ -111,7 +111,7 @@ export default function Home() {
               </motion.div>
               <motion.h1
                 variants={fadeIn}
-                className="text-5xl md:text-9xl font-black font-syne leading-none text-white mb-10 tracking-tighter"
+                className="text-4xl sm:text-6xl md:text-9xl font-black font-syne leading-none text-white mb-10 tracking-tighter"
               >
                 Data <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-fuchsia-500">Science<span className="text-white">.</span></span>
@@ -220,7 +220,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                 >
-                  <h2 className="text-5xl font-black font-syne text-white mb-10 inline-flex flex-col">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-syne text-white mb-10 inline-flex flex-col">
                     <span className="text-cyan-500 text-xs tracking-[0.4em] uppercase mb-4">Background</span>
                     Core Mission
                   </h2>
@@ -278,7 +278,7 @@ export default function Home() {
         <section id="skills" className="py-32 px-6 bg-white/[0.01]">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-24">
-              <h2 className="text-5xl font-black font-syne text-white mb-6 uppercase tracking-tighter">Technical Stack</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-syne text-white mb-6 uppercase tracking-tighter">Technical Stack</h2>
               <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-fuchsia-500 mx-auto rounded-full" />
             </div>
             <div className="grid md:grid-cols-4 gap-10">
@@ -321,7 +321,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-10">
               <div className="max-w-2xl">
                 <div className="text-cyan-500 font-black text-[10px] tracking-[0.4em] uppercase mb-4">Portfolio</div>
-                <h2 className="text-6xl md:text-8xl font-black font-syne text-white mb-8 leading-[0.85] tracking-tighter">Engineering <br />Solutions<span className="text-cyan-500">.</span></h2>
+                <h2 className="text-4xl sm:text-5xl md:text-8xl font-black font-syne text-white mb-8 leading-[0.85] tracking-tighter">Engineering <br />Solutions<span className="text-cyan-500">.</span></h2>
                 <p className="text-slate-400 text-xl font-medium max-w-lg leading-relaxed">
                   A selection of technical implementations focusing on predictive modeling and data system architecture.
                 </p>
@@ -374,7 +374,7 @@ export default function Home() {
         <section id="experience" className="py-32 px-6 bg-white/[0.01]">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-24">
-              <h2 className="text-5xl font-black font-syne text-white mb-4 uppercase tracking-tighter">Timeline</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-syne text-white mb-4 uppercase tracking-tighter">Timeline</h2>
               <p className="text-slate-500 font-bold text-xs tracking-[0.3em] uppercase">The path of progression</p>
             </div>
             <div className="space-y-16 relative">
@@ -416,7 +416,7 @@ export default function Home() {
 
                   <div className={`w-full md:w-[45%] p-10 rounded-[2.5rem] bg-slate-900/60 border border-white/5 backdrop-blur-md group-hover:border-cyan-500/20 transition-all shadow-2xl ${exp.align === 'left' ? 'md:text-right' : 'md:text-left'}`}>
                     <div className="mb-4 text-cyan-500 font-black text-[10px] tracking-[0.3em] uppercase">{exp.period}</div>
-                    <h3 className="text-3xl font-black text-white mb-2 leading-tight">{exp.role}</h3>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-white mb-2 leading-tight">{exp.role}</h3>
                     <div className="text-slate-400 font-bold text-sm mb-8 tracking-widest">{exp.company}</div>
                     <ul className={`space-y-4 ${exp.align === 'left' ? 'md:items-end' : 'md:items-start'} flex flex-col`}>
                       {exp.details.map((detail, j) => (
@@ -442,7 +442,7 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-6xl md:text-9xl font-black font-syne text-white mb-12 tracking-tighter">
+              <h2 className="text-4xl sm:text-5xl md:text-9xl font-black font-syne text-white mb-12 tracking-tighter">
                 Ready to <span className="text-cyan-500">Evolve?</span>
               </h2>
               <p className="text-slate-400 text-2xl font-medium mb-16 max-w-2xl mx-auto leading-relaxed">
