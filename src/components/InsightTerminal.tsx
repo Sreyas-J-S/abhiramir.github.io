@@ -22,7 +22,8 @@ export function InsightTerminal() {
       const line = codeSnippets[lineIndex];
       let charIndex = 0;
       const interval = setInterval(() => {
-        setText((prev) => prev + line[charIndex]);
+        const char = line[charIndex];
+        setText((prev) => prev + char);
         charIndex++;
         if (charIndex === line.length) {
           clearInterval(interval);
